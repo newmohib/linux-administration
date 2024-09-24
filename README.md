@@ -67,4 +67,5 @@
 - proc: process is as instance where an applicaiotn is run and  when we run an applicaion its create proces and this directory keep this
 - root: root is like another /home, root user is super user in the system
 - sudo ls -l /root
-- 
+- check the storage: df -h
+- check the memory: free -h
