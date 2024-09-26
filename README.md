@@ -69,3 +69,26 @@
 - sudo ls -l /root
 - check the storage: df -h
 - check the memory: free -h
+- _run: The run directory is the mountpoint for5 tempfs filesystem in the computers memory. Temporary data used by processses are kept there
+- df -h : disk free (free space of disk) -h means human readers
+- free -h: details for ram
+- ls /run/*pid :
+- id: get some id for items like user id, gid
+- ls /run
+- ls /run/user : get user id which are the unique for every user.
+- sudo ls /run/sudo
+- sudo ls /run/sudo/ts
+- 
+- /sbin: its a binary directory for usr/sbin, it use for kernel os
+- /snap: using for all package store this like "sudo apt-get intall test"
+- /srv: service/server, service file are kept, FTP, file related permission data store or sarve the file and data
+- /opt
+- swapfile
+- sys: its mounted on a virtual file system, all are used for kernel
+- df -h /sys => sysfs is mounted on /sys
+- df -h /run => tmpfs is mounted on /run
+- /tmp: Temp files and directories are kept
+- var: is as linux root log directry
+- 
+- 
+- 
