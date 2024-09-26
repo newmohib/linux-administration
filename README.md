@@ -8,6 +8,7 @@
 - and each virtual machine is called a guest machine
 
 #### Basic command
+- linux version: cat /etc/upstream-release/lsb-release
 - see file and directory
 - Present working Directory: pwd
 - create a text file: touch devOps
@@ -90,5 +91,75 @@
 - /tmp: Temp files and directories are kept
 - var: is as linux root log directry
 - 
-- wget : download file like wget 
+- wget : download file like, wget https://raw.githubusercontent.com/newmohib/linux-administration/refs/heads/master/README.md?token=GHSAT0AAAAAACWH375OG66FAOBNB37E3DKIZXVBRXA
+- less README.md => q for less console remove view
+- cat: console everything in file content
+- curl : curl : download file, package like, curl https://raw.githubusercontent.com/newmohib/linux-administration/refs/heads/master/README.md?token=GHSAT0AAAAAACWH375OG66FAOBNB37E3DKIZXVBRXA --output file.md
+- vim, vi : is use manupulate content, add, update, delete or get, => need to inter keyboad i for insert => for save  => Esc => :wq => enter
+- diff: the difference between file: test.txt test2.txt => can see both file difference
+- sudo useradd -m mohib
+- ls /home
+- set password: sudo passwd mohib => enter password
+- /etc: is used for storing configuration files
+- ls -l /etc/passwd => can see the password
+- sudo grep mohib /etc/passwd
+- cat test.txt | grep es => this content will show as grep and highlight with es content
+- less test.txt | grep es => this content will show as grep and highlight with es content
+- history: is used for all the commands in terminal
+- ctr + r : reverse-i-serch => tr => like have exist in commnad => ctr +r => for enter => end key on the keyboard => enter
 - 
+#### linux inode
+- Every file has metadata, metadata data about data (this are extra data about a particular file),  inode means it can stor metadata,
+- meta data have two tables that store information about a particular file
+  - Inode: Metadata about the file
+  - File table: File name and Inode n
+  - stat filename: details with file
+  - df -i
+  - !s : can see last command
+  - chmod: updae with permision file
+  - chmode 777 test.text: permission this file as 
+
+ #### Linux Terminal File Descriptors and Redirections
+ - Everything on Linux is about files and directories
+ - File Descriptor: special table using Linux, its actually for entries this table are file discriptor and only the linux kernel can update and access this table because its happens when one file is open or create,
+   - how to access the file
+   - where on the file system these files are ?
+ - File Descriptor is point to the => File table => inode table
+ - 
+ - Redirection:
+   - echo hello > somefile
+   - echo my name is mohib > somefile
+   - echo my country name is >> somefile
+   - 
+ - there have like 3 column
+   - 0-Standard Input => stdin: data that you input into the system from your keyboard like as data stream
+   - 1-standard output => stdout: data stream that prints on tho the screen
+   - 2-standard error stderr: any data related error can stor 
+- find / -name darey.io => get from file descriptions
+- find / -name darey.io > stdout.txt : print ouput write into this file
+- find / -name darey.io 2> error.txt (its print all error from file descriptor)
+- vim error.txt & => get a process id => process is instance of program
+- ps -ef | grep (processed)
+- lsof | grep (processed) => we can see more then file can use one processed
+
+#### Linux Teminal Users groups permissions
+- Linux is a multi-user operation system
+- ls -l /home
+- ls -l /home/mohib
+- sudo su
+- su mohib
+- 
+- Group
+  - create a group
+   - sudo groupadd jnrdev
+  - check this group and with id
+    - sudo grep jnrdev /etc/group
+  - modify user permission
+    - sudo usermod -a -G jnrdev mohib
+    - id mohib
+    - -a:
+    - -G: appending a setup a group
+    - -g: remove form any group
+  - Remove from user
+    - sudo userdel mohib
+    -   
