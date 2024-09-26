@@ -90,5 +90,5 @@
 - /tmp: Temp files and directories are kept
 - var: is as linux root log directry
 - 
-- 
+- wget : download file like wget 
 - 
