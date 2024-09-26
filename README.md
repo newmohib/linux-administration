@@ -217,4 +217,8 @@
           -   -M, --members USER,...        set the list of members of GROUP
           -   --extrausers              use the extra users database
           -   -A, --administrators ADMIN,... set the list of administrators for GROUP
-          -   
+       - Update permission
+         - one User to another user (like one file have dev user and we will update for mohib)
+           - ls -l
+           - sudo chown  mohib:dev  permision_demo
+           - 
