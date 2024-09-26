@@ -158,8 +158,63 @@
     - sudo usermod -a -G jnrdev mohib
     - id mohib
     - -a:
-    - -G: appending a setup a group
+    - -G: appending a set up a group
     - -g: remove form any group
   - Remove from user
     - sudo userdel mohib
-    -   
+  - update permission for file
+    - create a file
+      - touch permision_demo
+    - ls -l
+      - add written permission user/group/other (u+w, u+r, u+x, g+w, g+r, g+x,  o+w, o+r, o+x)
+        - chmod u+w permision_demo
+        - chmod g+w permision_demo
+      - remove written permission user/group/other (u-w, u-r, u-x, g-w, g-r, g-x, o-w, o-r, o-x)
+        - chmod u-w permision_demo
+        - chmod g-w permision_demo
+        - 
+    - Permission can be assigned to
+      - u => user
+      - g => group
+      - o => others
+    - Permission can be of
+      - Read          => 4
+      - write         => 2
+      - Execute       => 1
+      - No Permission => 0
+    - Permission can be a combination of
+      - Read + Write + Execute  => 7  (4+2+1)
+      - Read + Write            => 6  (4+2)
+      - Read + Execute          => 5  (4+1)
+      - Write + Execute         => 3  (2+1)
+    - some example
+      - chmod 777 permision_demo => user(Read + Write + Execute ), group(Read + Write + Execute ), others(Read + Write + Execute )
+      - chmod 732 permision_demo => user(Read + Write + Execute ), group(Write + Execute), others(write)
+     
+    - Users Groups Permissions
+      - chown
+      - gpasswd
+      - shadow
+      - create user
+        - sudo useradd -m mohib2
+      - crate a group
+        - sudo groupadd gr_dev1
+      - group permission to user (user: mohib2, group: gr_dev1)
+        - sudo usermod -a mohib2 -G gr_dev1
+        - sudo cat /etc/passwd | grep mohib
+        - sudo cat /etc/shadow | grep mohib
+        - sudo cat /etc/shadow | grep mohib2
+        - Set Password (if you see in password place have ! then add password by command)
+          - sudo passwd mohib2
+      - Administrative command by using gpasswd
+        - gpasswd -h
+          -   -a, --add USER                add USER to GROUP
+          -   -d, --delete USER             remove USER from GROUP
+          -   -h, --help                    display this help message and exit
+          -   -Q, --root CHROOT_DIR         directory to chroot into
+          -   -r, --remove-password         remove the GROUP's password
+          -   -R, --restrict                restrict access to GROUP to its members
+          -   -M, --members USER,...        set the list of members of GROUP
+          -   --extrausers              use the extra users database
+          -   -A, --administrators ADMIN,... set the list of administrators for GROUP
+          -   
