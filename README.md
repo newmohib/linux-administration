@@ -221,4 +221,23 @@
          - one User to another user (like one file have dev user and we will update for mohib)
            - ls -l
            - sudo chown  mohib:dev  permision_demo
-           - 
+  #### Arching and Cpmpression up
+-
+- du -h permision_demo
+- ls -tlr
+- du -h *demo*
+- tar -cvf archived.tar *demo*
+- du -h archived.tar
+- tar -tvf archived.tar *demo*
+- bzip2 archived.tar
+- du -h archived.tar.bz2
+- bunzip2 archived.tar.bz
+- tar -xvf archived.tar
+- gzip archived.tar
+- 
+- 
+- gzip archived.tar
+
+-
+
+  ##
