@@ -271,4 +271,28 @@
     - sssh-copy-id -i /home/dev/.ssh/id_rsa.pub dev@172.16.103.71
   - 
   - 
-
+#### Process
+- process: when the shell sends the program to the operating system to to interpret the binary
+- Daemon: when that process gets sent to the background and runs without taking control of the shell
+- service: A service essentially is still the daemon except that now we have control over starting, stopping, and checking the status of the daemon that is run in the background.
+- any process that is running in the background waiting for instructions to be passed on to it Listening for connetions to be acted upon
+- 
+- ps -l
+- ps -f
+- ps -lf
+- all process get and with detials
+ - ps -u
+ - ps -e
+ - ps -eef
+ - px -x
+ - ps aux | grep firefox
+ - ps -ef | grep firefox
+ - sudo kill processID
+ - Service command
+   - sudo systemctl start propitix.service
+  
+  - less /tmp/process_state
+  - nohup gedit &
+  - ps -ef |grrep gedit
+  - kill -l processid
+  - 
