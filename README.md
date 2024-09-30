@@ -254,5 +254,21 @@
   - DSA
   - ED25519
 - The client shares the public key with the remote server
--  
+
+#### OpenSSH server config
+- ls -latr /home/dev/.ssh
+- ssh-keygen -t rsa
+- ls -latr /home/dev/.ssh
+- cat /home/dev/.ssh/id_rsa.pub
+- check ssh is install or not
+  -ssh
+- got to remote server pc
+  - sudo apt install openssh-server -y
+  - ls -latr ~/.ssh
+  - ip a
+  - like as enp0s3 have one ip like 172.16.103.71/24
+  - copy publik key to server by command
+    - sssh-copy-id -i /home/dev/.ssh/id_rsa.pub dev@172.16.103.71
+  - 
+  - 
 
