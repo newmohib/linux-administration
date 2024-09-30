@@ -95,6 +95,7 @@
 - less README.md => q for less console remove view
 - cat: console everything in file content
 - curl : curl : download file, package like, curl https://raw.githubusercontent.com/newmohib/linux-administration/refs/heads/master/README.md?token=GHSAT0AAAAAACWH375OG66FAOBNB37E3DKIZXVBRXA --output file.md
+- reboot: sudo reboot now
 - vim, vi : is use manupulate content, add, update, delete or get, => need to inter keyboad i for insert => for save  => Esc => :wq => enter
 - diff: the difference between file: test.txt test2.txt => can see both file difference
 - sudo useradd -m mohib
@@ -234,10 +235,24 @@
 - bunzip2 archived.tar.bz
 - tar -xvf archived.tar
 - gzip archived.tar
-- 
-- 
 - gzip archived.tar
 
--
+#### SSH (Secure Shell)
+- it is a cryptographic network protocol which means a standard set of rules that is being used to transfer encoded packets over the network
+- similar tools that were used to transer data o9ver the network or that were used to connect to remote servers over network couldn't address
+- SSH creates a tunnel between the client and remote server for data exchange
+- They  keep sending data and packets back & forth to each other in encoded format
+- 
+-  Some of those tools were
+  - Telnet
+  - Rlogin
+  - RSH
+  - Standard username/password
+- Symmetric cipher uses thw same key to encrypt and decrypt data
+- There are many encryption algorithms
+  - RSA
+  - DSA
+  - ED25519
+- The client shares the public key with the remote server
+-  
 
-  ##
