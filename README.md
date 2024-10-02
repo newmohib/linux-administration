@@ -8,8 +8,20 @@
 - and each virtual machine is called a guest machine
 
 #### Basic command
-- ls -R test
+- ls -R test // with subdirectory
+- ls -a // show all with hidden folder and file
 - linux version: cat /etc/upstream-release/lsb-release
+- nano filename
+- uname -a // about os
+-  cat /etc/os-release
+-  lscpu // details for cpu
+-  lsmem // details for ram
+-  shift + ctrl + c/v // copy past from terminal
+-  sudo apt remove java // uninstall this
+-  can user create by supper user like sudo
+  - sudo adduser testuser
+  - sudo addgroup devgroup // crate group
+  - sud - testuser // switch user  
 - see file and directory
 - Present working Directory: pwd
 - create a text file: touch devOps
@@ -29,6 +41,9 @@
 - make a child directory: mkdir test/testchild
 - go home: cd
 - go to last folder: cd -
+- history 10 // history with last 10
+- 
+- 
 ##### FLAGS HELPS
   1: To Extend the functionality of the command you  are running
   2: To Tell A Commnad How you want IT to work
