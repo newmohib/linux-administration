@@ -1,5 +1,16 @@
 # linux Administration
 
+#### Linux kernel 
+- Debian-based (using package apt and apt-get)
+  - Ubuntu
+  - Debian
+  - Mint
+  - 
+- Red Hat-based (using yum)
+  - RHEL
+  - CentOS
+  - Fedora
+  - 
 #### Supervisor
 - Supervisor is nothing but the Operating System Kernel, Operating System's Kernel
 #### Hypervisor
@@ -11,7 +22,24 @@
 - ls -R test // with subdirectory
 - ls -a // show all with hidden folder and file
 - linux version: cat /etc/upstream-release/lsb-release
-- nano filename
+- nano filename // editor
+- 
+- vim filename // text editor
+  - for insert: i
+  - for save and quite: esc + : wq
+  - for discard / quit vim without saving the changes: esc + q!
+  - new file : vim filename
+  - 
+  - delete line from command mode: esc + dd
+  - delete 10 line from comand mode: esc + d10 and d agian
+  - undo changes : esc + u // or u
+  - go to the end of the line and switch to inset mode: A (Capital A)
+  - go to the end of the line: $  (doller)
+  - go  to beginning of the line : type 0
+  - go to specific line number: 12G (capital G)
+  - search into file : /text(search key) and type n for the next match and previous match type N (Capital N)
+  - replace all text in the file: :%s/old text/new text
+  - 
 - uname -a // about os
 -  cat /etc/os-release
 -  lscpu // details for cpu
