@@ -8,6 +8,7 @@
 - and each virtual machine is called a guest machine
 
 #### Basic command
+- ls -R test
 - linux version: cat /etc/upstream-release/lsb-release
 - see file and directory
 - Present working Directory: pwd
