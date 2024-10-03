@@ -461,10 +461,12 @@
 - Shell : The progream that interprets and executes the various commands that we type in the terminal
 - Translates our command so that the OS Kernel can understand it
 - Unix like systems
-- Different Shell Implementations ( shell vs sh vs Bash )
+- Different Shell Implementations ( shell vs sh vs Bash ) zsh
   - sh:
    - used to be the default shell
    - sh (Bourne Shell): /bin/sh
+   - with .sh extentions for all shell file
+   - 
   - bash:
     - update version of sh to bash and add more feature
     - default shell prgram for most UNIX like systems
@@ -482,4 +484,54 @@
 - share the instructions
 - login & Bulk Operations
 - 
+
+##### shebangh
+- #!/bin/bash
+ - -# : in  musical notation , also calld "sharp"
+ - ! : also called "bang"
+ - shegang become  a shortening of sharp-bang
+ -  try to run this file with sample echo
+  - ./setup.sh 
+  - bash setup.sh
+   - if getting error then ls -l setup.sh => and will provide permission (for all exicute permission)
+   - sudo chmod u+x setup.sh
+   - 
+##### Variabls
+- used to store data and can be referenced later
+- key=value: assign the value to the vairable with 
+- Note: There must be no spaces around the "=" sign
+- variable_name=$(command) : Store output of a command in a variable
+- 
+
+##### Conditionals
+
+- allow you to alter the control flow of the program
+- E.g. Execute a command only when a certain condition is true
+- if [ -d "config" ] //-d : check this is a directory
+- if [ "$num_files" -lt 10 ]
+ - -lt: less then
+ - -gt: greater then
+ - -ne: not equal
+ - -eq: equal
+
+- String
+ - == BASH
+ - = POSIX
+ - != not equal
+ - -z operand size is zero
+ - -n operand size is non-zero
+ - str : not the empty string
+
+- Passing Arguments to a Script
+ - user_group=$1
+  - Positional Parameters
+   - Arguments passed to script are processed in the same order in which thay're sent
+   - The indexing of arguments starts at 1
+   - Positional parameters: parameters start from $1 to $9
+   - 
+ - run with params
+  - ./setup.sh admin
+  - ./setup.sh setup-scripts dev
+ 
+
 
