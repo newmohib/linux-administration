@@ -334,9 +334,54 @@
  - sudo kill processID
  - Service command
    - sudo systemctl start propitix.service
-  
   - less /tmp/process_state
   - nohup gedit &
   - ps -ef |grrep gedit
   - kill -l processid
-  - 
+
+  ## User Permission
+  - type of user
+    - Superuser Account: Root User
+     - unrestricted permissions
+     - For administrative tasks: Need to login as root user or execute commands as root (sudo command)
+    - User Account: standard user
+     - A regular user we create to log in, E.g. dev => /home/dev
+     - 
+    - Service User:
+     - Relevant for Linux server distributions: Database server, web server
+     - each service will get its own user
+     - E.g. MySQL user will start MySQL applications
+     - Best practice for Security
+     - Don't run services with root user
+    - 
+ - Access Control Files
+   - /etc/passwd : Stores user account information, everyone can read it, but only root user can change the file
+     - username:password:UID:GID:GECOS:HOMEDIR:SHELL
+     - 
+   - /etc/shadow : 
+   - /etc/group :
+- Login sa username: su - username
+  - su : short for substitute or switch user
+- change password: sudo passwd dev
+- 
+- user primary group assign
+  - sudo usermod -g devops dev
+  - remove all groups from dev 
+   - sudo deggroup dev
+  - one user assigns or permission multiple groups as secondary group
+    - sudo usermod -G admin, othergroup dev
+  - add new group with existing group permision
+    - sudo usermod -aG newGroup dev
+  - list of groups current user
+    - groups
+  - check  specific user group
+    - groups dev
+  - create  user with group flag -G as secondary group
+   - sudo useradd -G devOps, dev3
+  - Removing a group form a user (here dev is user and remove for permission devOps group)
+    - sudo gpasswd -d dev devOps
+ - Check Ownership
+   - ls -l 
+  - Change Ownership
+    - sudo chown username:group filename
+    -  
