@@ -457,4 +457,29 @@
 - clear; sleep 1; echo "Hope you are enjoying the lecture"
 - 
 -   
-#####  
+#####  Shell Script
+- Shell : The progream that interprets and executes the various commands that we type in the terminal
+- Translates our command so that the OS Kernel can understand it
+- Unix like systems
+- Different Shell Implementations ( shell vs sh vs Bash )
+  - sh:
+   - used to be the default shell
+   - sh (Bourne Shell): /bin/sh
+  - bash:
+    - update version of sh to bash and add more feature
+    - default shell prgram for most UNIX like systems
+    - bash => /bin/bash
+  - SHell and Bash terms are often used interchangeably
+  - Bash Scripting
+  - Bash Commands
+  - Bash is a shell program
+  - Bash is a programming language
+  -  
+- 
+- variables, conditional statements, passing arguments to script, read user input, loops, functions
+- Avoid repetitive work
+- keep history of configuration
+- share the instructions
+- login & Bulk Operations
+- 
+
