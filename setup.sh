@@ -42,3 +42,10 @@ echo "using file $file_name to configure somethings"
 
 echo "here are all configuration files: $config_files"
 
+echo "Reading user input"
+
+read -p "please enter you password: " user_pwd
+
+echo "thanks for your password $user_pwd"
+
+
