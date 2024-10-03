@@ -412,3 +412,49 @@
   - 
   - sudo chmod 777 test.txt
   - 
+#### see system all logs
+- cat /var/log/syslog
+- 
+#### Input and Output
+ - cat /var/log/syslog | less  => and enter space key
+   - pipes (|) the output of the previous command as and input to the next command
+   - | less : desplays the contents of a file or a command output one page at a time
+   - allows you to navigate forward and backward through the file
+   - mostly used for oening large files, as less doesn't read the entire file, which resuls in faster load timers 
+   - 
+ - ls /usr/bin | less => and enter space key
+ - ls /usr/bin | grep java => its filter by java and enter space key
+ - history | less => and enter space key
+ - history |  grep sudo
+ - history | grep "sudo chmod"
+ - history |  grep "sudo chmod" | less
+   - grep:
+     - filter with key
+     - Stands for: Globally Serch for regualr expression and print out
+     - Searches for a particular pattern of characters and displays all lines that contain that pattern
+     - 
+ - cat test.txt | grep 80 => serch by as content contain 80
+ - 
+ 
+ ##### Redirectins (>)
+ -  : >: character is the redirect operator
+ -  takes the output from the previous command and sends it to a file that you give
+   -  history |grep sudo > sudo-commands.txt
+   -  
+ - one file content to another or replace all content
+   - cat sudo-commands.txt > sudo-commands-2.txt
+   - 
+ -  append one file content to another file content
+ -  cat sudo-commands.txt >> sudo-commands-2.txt
+
+##### Standard Input and Standard Output
+- Every program has 3 built-in streams
+  - STDIN (0) = Standard Input
+  - SDOUT (1) = Standart Output
+  - SDERR (2) = Standard Error
+- we pipe or redirect tha standard output from one command to the standard output of another command
+- 
+- clear; sleep 1; echo "Hope you are enjoying the lecture"
+- 
+-   
+#####  
