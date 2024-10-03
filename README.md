@@ -384,4 +384,31 @@
    - ls -l 
   - Change Ownership
     - sudo chown username:group filename
-    -  
+  - Change Group
+    - sudo chgrp devOps2 test.txt
+  - See with hidden files
+    - ls -la
+- File Permission (ls -l)
+- 3 ways to set permissions (1: Symbolic mode(+:add, -: remove ), 2: Set Permission (= set the permission and override the permissions ), 3: Numeric Mode (4: read, 2:write, 1: execute, 0: no permi))
+  - r: read
+  - w : write
+  - x : exicution
+  - : - : no permision
+  - sudo chmod -x tesFolder
+  - group permission remove
+   - sudo chmod g-w test.txt
+  - group permission add
+    - sudo chmod g+w test.txt
+  - sudo chmod g=rwx test.txt // all permission
+  - sudo chmod g=r-- test.txt // all permision
+  - 0 : --- // no permission
+  - 1 : --x // execute
+  - 2 : -w- // write
+  - 3 : -wx // execute + write
+  - 4 : r-- // read
+  - 5 : r-x // read + execute
+  - 6 : rw- // read + write
+  - 7 : rwx // read + write + execute
+  - 
+  - sudo chmod 777 test.txt
+  - 
