@@ -605,3 +605,32 @@
 
 #### Networking 
 
+- How do computer networks work?
+- How computers connect to the internet
+- what is an IP address and port
+- what is a DNS
+- 
+- LAN: 
+ - collection o fdevices connected together in one physical location
+ - Each devicee has a unique IP address
+ - Devices communicate via these IP address
+ - 
+ - Subnet: logical subdivision of an IP network
+ - Subnetting: process of dividing a network into two or more networks
+ - 192.168.0.0 => 255.255.255.0
+  - IP address:  192.168.0.0
+  - Subnet Mask: 255.255.255.0 to 255.255.0.0 
+  - Starting point of IP range, the firsh IP in the range
+  - sets the IP range 
+  - 192.168.x.x : all IP address starting with 192.168.x.x belong to same LAN
+  - 192.168.0.x : all IP address starting with 192.168.0.x belong to same LAN
+  - 255.255.0.0 : means that 16 bits are fixed
+  - 255.255.255.0: means 24 bits are fixed
+  - value 255 fixates the octet
+  - value 0 means free range
+
+  - IP decimal value ???
+  - 
+  - 
+
+
