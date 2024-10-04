@@ -560,3 +560,47 @@
  - Reuse code
  - enable you to break down the overall functionality of a script into smaller, logical code blocks
  - this code block can then be r
+
+#### Environment variables
+
+- Each user has its own environment
+- each user can configure its own environment/account by setting preferences
+- These OS Configureations should be isolated from other user environments
+- 
+- List of all environment varible lsit
+ - printenv
+- print specific varibale name value
+ - printenv USER
+- get variable value
+ - echo $USER
+- 
+- 
+- Sensitive data for applicaiton
+ - set these data as env vars on serve 
+ - apps can read those env vars
+
+- add environment variable and value into os environment
+ - export DB_USERNAME=dbuser
+ - export DB_PASSWORD=dbpass
+- unset/ Remove variable from environmetn
+ - unset DB_USERNAME
+- Persisting Env variables
+ - Shell specific configuration file
+  - per user shell specific configuration files
+  - Eg. if you are using Bash, you can declare the variables in the ~/.bashrc file
+  - variables set in thsi file are loaded whenever a bash login shell is entered
+
+  - add user specific environment
+    - vim .bashrc => add environvariable value its all time get as sessing
+    - add key=value
+    - and try to get value and load the new env vars into the current shell session
+    - source .bashrc
+  - add for system specific/global environment
+    - vim /etc/environment
+    - /usr/bin/ls -l
+    - echo $PATH
+    - 
+  - Custom command
+   - 
+  -  
+
