@@ -536,4 +536,27 @@
 - Read User Input
  - 
 
+- Loops in Shell
+ - There are different type of loops:
+  - while loop
+  - for loop
+  - until loop
+  - select loop
 
+  - for loop :
+    for var in workd1 workd2...
+     do
+      statements to be ececuted for every word
+     done
+  - while loop
+   - Execute as set of commands repeatedly until some condition is matched
+   - like vadate that some service is availabel
+   - Double parenthesis for arithmetic operations $((2+4)) $(($sum1+$sum2))
+   - [ : POSIX
+   - [[ : Bash
+
+- Functions
+ - Better overview when functions are named descriptively
+ - Reuse code
+ - enable you to break down the overall functionality of a script into smaller, logical code blocks
+ - this code block can then be r
