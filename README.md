@@ -630,7 +630,53 @@
   - value 0 means free range
 
   - IP decimal value ???
+  - ifcongig
+  - netstat
+  - ps aux
+  - nslookup
+  - ping
   - 
   - 
+
+#### SSH
+- secure shall
+- cpy File to remote server 
+- install software on new server
+- ssh is a network protocol that gives users a secure way to access a computer over the internet
+- SSH refers also to the suite of utilities that implement that protocol
+- encrypted data communication
+- 
+- There are 2 type for access remote server
+ - username:passowrd
+ - SSH key Authentication
+  - client creates ans SSH key pair ( key pair=Private key + public key )
+  - Private key: Secret key. is stored securly on the client machine
+  - Public key: public. can be shared e.g with the remote server
+- SSH service runs by default on machine
+- By default, SSH server listens on port 22
+- in firewall rull we allow access on port 22
+- Sourche= who can access the server on this port ?
+- SSH i powerful and needs to be restricted to specific IP addresses
+- ls .ssh/known_hosts
+- default ssh key path: ls .ssh/id_rsa (e.g, ssh -i .ssh/id_rsa root@ip = ssh root@ip )
+- scp: secure copy: allows you to securely copy filts and directories secure meaning filts and password are encrypted
+- 
+
+
+#### Process Terms
+- What is process
+- what is theread
+- how are processes and threads different
+- what is a multi-core CPU
+- what does it mean when a CPU has HyperThreading
+- what is a race condition
+- Process:
+ - how do i know which process are running
+ - hos do i start background processes
+ - how to i get into a background process
+ - what happens to a process when my terminal closes
+ - can i do anything about that 
+ 
+
 
 
