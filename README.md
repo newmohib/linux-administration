@@ -678,5 +678,59 @@
  - can i do anything about that 
  
 
+#### Database for DevOps
+- How to congirure DB
+- how to setup DB
+- how to manage DB
+- replication
+- backups
+- restore DB
 
+##### Database Type
+- why so many databasees?
+- how are they different?
+- which one should i use for my App ?
 
+- Key Valud Database (Redis, Memcached, etcd from Kubernetes)
+ - very fast, limited storege, no primary DB, unique key , no joins, in memory
+ - Best for : caching, message queue
+- wide column database (Cassndra, Apache HBASE)
+ - does not hava pre-define schemas or schema-less, queries similar to SQL
+ - Scalable
+ - no join
+ - limited compared to relational DB
+ - Best for: no primary DB, Time-Series, IoT Records (smard card history ), Historical-Recoreds
+- Document Database (MonogDB, DynamoDB, CouchDB)
+ - Slowr writes
+ - faster to read
+ - Schema-less, no join, denormalized
+ - collection: (Documtns)
+ - easy to get started
+ - best for: mobile apps, game apps, CMS, Most APPs
+ - not for: grpas, socal media,
+- Relational Database (MySQL, Postgres, CockroachDB)
+ - to store structured data
+ - schema and data types need to be created first
+  - Stuctured query language
+ - Normalizing to avoid duplicated data
+ - ACID (Atomicity, Consistncy, Isolation, Durability)
+  - will not create any networking, hardware, or software issue,
+  - no half-changes are updated in database
+  - Either all changes get applied or NONE
+  - 
+  - 
+- Grap Dtabase (Neo4j, Dgraph)
+ - Directly connect entities
+ - Edges are the relationships
+ - easier to query
+ - Graphs
+ - patterns
+ - Recommendation 
+ - fore use: like youtube
+
+- Search Databases (ElasticSearch, Solr)
+ - Search database through massive data entries
+ - Full text serch in efficient and fast way
+ - Similar to documetn-orienteated database
+ - creates index of words
+ - 
