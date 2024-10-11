@@ -733,4 +733,41 @@
  - Full text serch in efficient and fast way
  - Similar to documetn-orienteated database
  - creates index of words
+ -
+
+ ###  Build Tools & package Manger
+
+ - can use Artifact repository like (Nexus, JFrog Artifactory)
+ - what kind of file is the artifact
+  - Artifact file looks different for each programming language
+   - java: JAR OR WAR FILE (includes whole code plus dependencies) like spring framwork, datetime and pdf processing libraries
+   - java : Maven, gradle
+   - 
+- Add java to "Path" and set "JAVA_HOME" environment variable
+- Pre-Requisites or Maven
+ - java SDK
+ - java in path
+ - set JAVA_HOME
+ - Download maven
+  - sudo apt install maven -y
+  - mvn --version
+  - build:  mvn package
+- Setup Java Gradle Project in IntelliJ
+ - curl -s "https://get.sdkman.io" | bash
+ - source "$HOME/.sdkman/bin/sdkman-init.sh"
+ - sdk install gradle
+ - gradle -v
+ - gradle build
+
+- install homebrew
+ - sudo apt update
+ - sudo apt-get install build-essential
+ - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+ - brew --version
+ - brew install gradle
+ - brew install  --ignore-dependencies maven
  - 
+
+
+
