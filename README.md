@@ -769,5 +769,86 @@
  - brew install  --ignore-dependencies maven
  - 
 
+#### Build Tools for DevOps Engineers
 
+- Build Docker Image => Push to Repo => Run on Server
+- you need to configure the build automation tool CI/CD Pipeline
+ - install dependencies
+ - run tests
+ - build/bundle app
+ - push to repo
+
+#### what is infreastructure as a Service
+
+- The web App needs to run Somewhere
+ - Company buys own servers
+ - You manges own servers and infrastructure
+ - if something breaks, you need to fix it
+- Delegate Ingrastructure Mangement
+ - Move your physical infrastructure to cloud
+ - You just rent the servers
+
+#### added Google Cloud
+- create vm instance form compute engine with ubuntu
+- connect ssh form console
+- sudo apt-get update
+- sudo apt-get upgrade -y
+- apt install openjdk-8-jre-headless
+- from local pc code copy to server by scp (sequre copy )
+ - git clone https://gitlab.com/twn-devops-bootcamp/latest/05-cloud/java-react-example.git
+ - cd java-react-example
+ - gradle build
+ - scp file locally destination
+  - scp build/libs/java-react-example.jar user@34.143.192.91:/home/user
+   - user means: ssh key gen user
+   - java -jar java-react-example.jar
+   - we need to this port open
+  - ps aux | grep java
+  - netstat is install for check list of app which are active : apt install net-tools
+  - netstat -lpnt
+- create user into linux
+ - adduser mohib
+ - usermod 
+
+#### Artifact Repository
+ - what is artifact repository ?
+  - artifacts: apps built into a single file
+  - Different artifact formats (JAR,WAR,ZIP, TAR etc.)
+  - artifact repository: storage of those artifacts
+  - artiact repository needs to support this specific format
+  - repository for each file/artifact type
+  - 
+ - what is an artifact repository manager 
+  - they produce different types of artifacts
+  - you need different reposistories for them
+  - different software for each repository
+  - just 1 applicaiton for managing all
+  - apt, composer, conan, cpan, docker, elpa, gitlfs, go, helm, maven, npm , nuGet, p2, pypl,r, row, rubyGems, yum
+
+  - Nuxus is one of the repository manager
+   - upload and store different build artifacts
+   - Retrieve (download) artifacts later
+   - Central storage
+   - for nexus need to bugger ram 
+   - cd opt
+   - wget https://download.sonatype.com/nexus/3/nexus-3.73.0-12-unix.tar.gz
+   - tar -zxvrf nexus-3.73.0-12-unix.tar.gz
+   - and get 2 folder
+    - nuxus-folder: contains runtime and applicaion of nexus
+    - sonatype-work: contains own config for nexus and data
+    - adduser nexus
+    - chown -R nexus:nexus  nuxus-folder
+    - chown -R nexus:nexus  sonatype-work
+    - vim nuxus-folder/bin/nexus.rc
+    - uncomment 1st line and add user as nexus
+    - change usser: su -nexus
+    - strart nexus: /opt/nuxus-folder/bin/nexus start
+    - netstat
+    - default run 8081 port
+    - Nexus Rest API:
+     - curl -u user:pwd -X GET 'http://ip:port/service/rest/v1/repositories'
+     - 
+
+  - mvnRepository for java/jar files
+  -   
 
